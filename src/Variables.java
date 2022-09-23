@@ -67,5 +67,39 @@ public class Variables {
         mtNumbers[3][4] = 12;
 
         System.out.println(Arrays.deepToString(mtNumbers));
+
+//        Constants
+        final float pi = 3.14F;
+
+//        Arithmetic operations
+        double result = (double) 10 / (double) 3; // Otherwise if int the result is 3
+        System.out.println(result);
+
+        int x = 1;
+        int y = x++; // will return 1
+        // not the same as:
+        int k = ++x; // will return 3
+        System.out.println(k);
+
+        int priorities = 10 + 3 * 2; // division & multiplication happens before addition subtraction
+        System.out.println(priorities);
+
+//        Casting
+        // Implicit casting, happens automatically in memory
+        // byte > short > int > long
+        short j = 1;
+        int l = j + 2;
+        System.out.println(l);
+
+        // byte > short > int > long > float > double
+        double a = 11.1;
+        double w = a + 2;
+        System.out.println(w);
+
+        // Explicit casting, we specifically request for a certain type
+        String u = "120.54";
+//        int p = Integer.parseInt(u) + 80; // will return 200
+        int p = (int)Double.parseDouble(u) + 80; // will return 200
+        System.out.println(p);
     }
 }
